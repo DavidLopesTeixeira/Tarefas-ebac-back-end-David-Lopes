@@ -23,8 +23,8 @@ public class Main {
 
         do {
             System.out.println("\nEscolha uma opção:");
-            System.out.println("(1) Adicionar carro");
-            System.out.println("(2) Exibir todos os carros");
+            System.out.println("(1) Cadastar carros");
+            System.out.println("(2) Exibir carros cadastrados");
             System.out.println("(0) Sair");
             System.out.print("Opção: ");
             opcao = sc.nextInt();
