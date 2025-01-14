@@ -36,8 +36,8 @@ public class Main {
                     break;
                 case 3:
                     isSair = true;
-                    sc.close();
                     System.out.println("Até logo...");
+                    sc.close();
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
@@ -97,7 +97,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println("Selecione 0 para sair,  1 para todos, 2 para Mulheres e 3 para Homens:");
+            System.out.println("Selecione 0 para voltar, \n 1 para todos,\n 2 para Mulheres,\n 3 para Homens,\n 4 resumo");
             Integer op = sc.nextInt();
             sc.nextLine();
             switch (op){
@@ -107,11 +107,26 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Mulheres cadastradas:");
+                    if(mulheres.isEmpty()){
+                        System.out.println("Não existem mulheres cadastradas!");
+                        return;
+                    }
                     mulheres.forEach(m -> System.out.println(m));
                     break;
                 case 3:
                     System.out.println("Homens cadastrados:");
+                    if (homens.isEmpty()){
+                        System.out.println("Não existem Homens cadastradas!");
+                        return;
+                    }
                     homens.forEach(h -> System.out.println(h));
+                    break;
+
+                case 4:
+                    System.out.println("Existem: " + pessoas.size() + " pessoas cadastradas\n" +
+                             + homens.size() + ":" +  " Homens\n"  +
+                            mulheres.size() + ":" + " Mulheres\n");
+                    break;
 
                 case 0:
                     System.out.println("Até logo...");
