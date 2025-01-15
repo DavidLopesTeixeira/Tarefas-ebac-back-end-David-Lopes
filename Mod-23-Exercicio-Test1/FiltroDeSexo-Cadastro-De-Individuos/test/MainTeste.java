@@ -12,7 +12,9 @@ public class MainTeste {
     @Test
     public void testEquals(){
         List<Pessoa> pessoas = new ArrayList<>();
-        // instanciei as pessoas dessa forma, pois na classe Main eu recebo esses dados de forma dinâmica
+        // Instanciando objetos Pessoa diretamente para simular o cenário dinâmico de entrada de dados na classe Main.
+        // Este teste verifica se o filtro aplicado à lista de pessoas retorna corretamente apenas as pessoas do sexo "Feminino".
+
         Pessoa p1 = new Pessoa("Juan", "Masculino", "Brasileiro", 29);
         Pessoa p2 = new Pessoa("Marcio", "Masculino", "Brasileiro", 21);
         Pessoa p3 = new Pessoa("Ana", "Feminino", "Brasileiro", 18);
