@@ -78,7 +78,7 @@ public class Car {
 	}
 
 	public Car() {
-		this.accessories = new ArrayList<Accessory>();
+		this.accessories = new ArrayList<>();
 
 	}
 
